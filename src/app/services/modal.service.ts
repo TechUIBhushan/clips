@@ -14,13 +14,13 @@ export class ModalService {
 
   register(id: string) {
     this.modals.push({
-      id: id,
+      id,
       visible: false
     })
   }
 
   isModalOpen(id: string) {
-    return !!this.modals.find(element => element.id === id)?.visible
+    return this.modals.find(element => element.id === id)?.visible
   }
 
   toggleModal(id: string) {
